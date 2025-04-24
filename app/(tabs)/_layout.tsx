@@ -21,9 +21,9 @@ const _layout = () => {
         }}
       />
       <Tabs.Screen
-        name="whishlists"
+        name="wishlist"
         options={{
-          tabBarLabel: 'Wishlists',
+          tabBarLabel: 'Wishlist',
           headerShown: false,
           tabBarIcon: ({ size, color }) => (
             <Ionicons name="heart-outline" size={size} color={color} />
