@@ -16,7 +16,6 @@ const _layout = () => {
         name="index"
         options={{
           tabBarLabel: 'Explore',
-          headerShown: false,
           tabBarIcon: ({ size, color }) => <Ionicons name="search" size={size} color={color} />,
         }}
       />
@@ -24,7 +23,6 @@ const _layout = () => {
         name="wishlist"
         options={{
           tabBarLabel: 'Wishlist',
-          headerShown: false,
           tabBarIcon: ({ size, color }) => (
             <Ionicons name="heart-outline" size={size} color={color} />
           ),
