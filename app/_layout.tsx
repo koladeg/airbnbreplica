@@ -12,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 import Colors from '@/constants/Colors';
 import { ClerkProvider, useAuth } from '@clerk/clerk-expo';
 import { tokenCache } from '@clerk/clerk-expo/token-cache';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const CLERK_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -71,7 +72,9 @@ export default function RootLayout() {
 
   return (
     <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY!} tokenCache={tokenCache}>
+      <GestureHandlerRootView>
       <RootLayoutNav />
+      </GestureHandlerRootView>
     </ClerkProvider>
   );
 }
