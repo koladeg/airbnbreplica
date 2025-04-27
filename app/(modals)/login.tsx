@@ -28,7 +28,9 @@ const Page = () => {
         const { createdSessionId, setActive, signIn, signUp } = await startSSOFlow({
           strategy,
           // for Expo web: current URL; for native: supply your scheme
-          // redirectUrl: AuthSession.makeRedirectUri({ useProxy: true }),
+          redirectUrl: AuthSession.makeRedirectUri({ scheme: 'scheme1',
+            preferLocalhost: true,
+            isTripleSlashed: true, }),
         });
 
         if (createdSessionId) {
